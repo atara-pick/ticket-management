@@ -1,0 +1,29 @@
+{
+  "name": "ticket-management",
+  "private": true,
+  "workspaces": [
+    "server",
+    "client"
+  ],
+  "engines": {
+    "node": "^22.11.0 || ^24.0.0"
+  },
+  "scripts": {
+    "dev": "concurrently -k \"npm run dev -w server\" \"npm run dev -w client\"",
+    "build": "npm run build --workspaces",
+    "start": "npm run start -w server",
+    "test": "npm test --workspaces",
+    "test:server": "npm test -w server",
+    "typecheck": "npm run typecheck --workspaces",
+    "db:generate": "npm run db:generate -w server",
+    "db:migrate": "npm run db:migrate -w server",
+    "db:seed": "npm run db:seed -w server",
+    "test:client": "npm test -w client"
+  },
+  "overrides": {
+    "vite": "6.4.6"
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.0"
+  }
+}

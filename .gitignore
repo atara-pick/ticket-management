@@ -1,0 +1,36 @@
+node_modules/
+dist/
+server/data/
+.env
+coverage/
+
+# Local database overrides and SQLite sidecar files
+*.sqlite
+*.sqlite-*
+*.sqlite3
+*.sqlite3-*
+*.db
+*.db-*
+*.tsbuildinfo
+
+# Local environment, credentials, and generated files
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+secrets/
+credentials.json
+*.log
+*.tmp
+*.temp
+.cache/
+.npm-cache/
+tmp/
+temp/
+*.zip
+*.rar
+
+# Assignment brief stays local for the public repository
+/fullstack-home-assignment-he.pdf
